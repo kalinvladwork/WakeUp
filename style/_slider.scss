@@ -1,0 +1,264 @@
+.title-main.slider-title {
+  max-width: 70%;
+}
+
+.slider-archive {
+  padding-bottom: 40px;
+
+  .slick-list {
+    margin-left: calc((var(--card-container-gap) / 1.5 ) * -1);
+    width: calc(100% + var(--card-container-gap));
+  }
+
+  .slick-track {
+    gap: var(--card-container-gap);
+    display: flex;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--second-color);
+    border-radius: 50%;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: -65px;
+    padding: 0;
+    outline: none;
+    &:hover, &:focus {
+      border-color: var(--primal-color);
+      background: transparent;
+      color: transparent;
+    }
+  }
+
+  .slick-prev {
+    right: 60px;
+
+    &:before {
+      content: url("../images/arrow-slider-prev.svg");
+    }
+  }
+
+  .slick-next {
+    right: 10px;
+
+    &:before {
+      content: url("../images/arrow-slider-next.svg");
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+
+    .slick-prev,
+    .slick-next {
+      top: -80px;
+    }
+
+    .slick-prev {
+      right: 60px;
+    }
+
+    .slick-next {
+      right: 10px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .slick-prev,
+    .slick-next {
+      top: -70px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .slick-prev,
+    .slick-next {
+      height: 40px;
+      width: 40px;
+      top: -80px;
+    }
+
+    .slick-prev {
+      right: 60px;
+    }
+
+    .slick-next {
+      right: 10px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      display: block;
+      height: 50px;
+      width: 50px;
+      top: -115px;
+    }
+
+    .slick-prev {
+      right: 90px;
+    }
+
+    .slick-next {
+      right: 20px;
+    }
+  }
+}
+
+.slider-hero-block {
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+
+  .slick-list {
+    margin-left: calc((var(--card-container-gap) / 1.5 ) * -1);
+    width: calc(100% + var(--card-container-gap));
+  }
+
+  .slick-track {
+    gap: var(--card-container-gap);
+    display: flex;
+  }
+
+  .slick-slide {
+    height: 100%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    bottom: 20px;
+    padding: 0;
+    outline: none;
+    z-index: 1;
+
+    &:hover, &:focus {
+      border-color: var(--base-color);
+      background: transparent;
+      color: transparent;
+    }
+  }
+
+  .slick-prev {
+    right: 60px;
+
+    &:before {
+      content: url("../images/arrow-slider-hero-prev.svg");
+    }
+  }
+
+  .slick-next {
+    right: 10px;
+
+    &:before {
+      content: url("../images/arrow-slider-hero-next.svg");
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+
+    .slick-prev,
+    .slick-next {
+      bottom: 80px;
+    }
+
+    .slick-prev {
+      right: 60px;
+    }
+
+    .slick-next {
+      right: 10px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .slick-prev,
+    .slick-next {
+      bottom: 50px;
+      right: unset;
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next {
+      left: 60px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .slick-prev,
+    .slick-next {
+      height: 40px;
+      width: 40px;
+      bottom: 50px;
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+
+    .slick-next {
+      left: 60px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      display: block;
+      height: 50px;
+      width: 50px;
+      bottom: 60px;
+    }
+
+    .slick-prev {
+      left: 20px;
+    }
+
+    .slick-next {
+      left: 90px;
+    }
+  }
+}
+
+.hero-block-slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  height: 100%;
+  min-height: calc(100vh - var(--header-height));
+  justify-content: space-around;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+
+
+

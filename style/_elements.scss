@@ -1,0 +1,99 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--step);
+  height: 100%;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: 'Montserrat',Source Sans Pro,-apple-system,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+  background-color: var(--neutral-accent-color);
+  color: var(--primal-color);
+  position: relative;
+
+  &.is-no-scroll {
+    overflow: hidden;
+  }
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  line-height: 120%;
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  line-height: 120%;
+  margin: 0;
+}
+
+p {
+  font-size: var(--font-size);
+  line-height: 140%;
+}
+
+a {
+  color: var(--primal-color);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 22px;
+
+  li {
+    position: relative;
+
+    &:before {
+      content: '';
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxMyAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuNTk5MjEgMC44Njg1ODdDNS45NjI4NSAwLjExNDI1MSA3LjAzNzE1IDAuMTE0MjQ5IDcuNDAwNzkgMC44Njg1ODZMOC43ODc3NiAzLjc0NTY5QzguODg2MDIgMy45NDk1MSA5LjA1MDQ5IDQuMTEzOTggOS4yNTQzMSA0LjIxMjIzTDEyLjEzMTQgNS41OTkyMUMxMi44ODU3IDUuOTYyODUgMTIuODg1OCA3LjAzNzE1IDEyLjEzMTQgNy40MDA3OUw5LjI1NDMxIDguNzg3NzZDOS4wNTA0OSA4Ljg4NjAyIDguODg2MDIgOS4wNTA0OSA4Ljc4Nzc2IDkuMjU0MzFMNy40MDA3OSAxMi4xMzE0QzcuMDM3MTUgMTIuODg1NyA1Ljk2Mjg1IDEyLjg4NTggNS41OTkyMSAxMi4xMzE0TDQuMjEyMjMgOS4yNTQzMUM0LjExMzk4IDkuMDUwNDkgMy45NDk1MSA4Ljg4NjAyIDMuNzQ1NjkgOC43ODc3NkwwLjg2ODU4NyA3LjQwMDc5QzAuMTE0MjUxIDcuMDM3MTUgMC4xMTQyNDkgNS45NjI4NSAwLjg2ODU4NiA1LjU5OTIxTDMuNzQ1NjkgNC4yMTIyM0MzLjk0OTUxIDQuMTEzOTggNC4xMTM5OCAzLjk0OTUxIDQuMjEyMjMgMy43NDU2OUw1LjU5OTIxIDAuODY4NTg3WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==);
+      background-repeat: no-repeat;
+      background-size: 7px;
+      width: 7px;
+      height: 7px;
+      display: block;
+      position: absolute;
+      left: -20px;
+      top: 30%;
+    }
+  }
+
+  li + li {
+    margin-top: 15px;
+  }
+
+  @media (min-width: 992px) {
+    li {
+      &:before {
+        background-size: 9px;
+        width: 9px;
+        height: 9px;
+      }
+    }
+
+    li + li {
+      margin-top: 15px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    li {
+      &:before {
+        background-size: 12px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    li + li {
+      margin-top: 20px;
+    }
+  }
+}

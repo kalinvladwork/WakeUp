@@ -1,0 +1,125 @@
+.burger-button {
+  display: block;
+  position: relative;
+  width: var(--burger-button-size);
+  height: var(--burger-button-size);
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background: transparent;
+  z-index: 10;
+  margin-right: 20px;
+
+  @media (min-width: 768px) {
+    margin-right: 25px;
+  }
+
+  @media (min-width: 992px) {
+    margin-right: 40px;
+  }
+}
+
+.burger-button span {
+  position: absolute;
+  width: var(--burger-button-size);
+  height: 2px;
+  background-color: var(--base-color);
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s, bottom 0.2s 0.2s, top 0.2s 0.2s, transform 0.2s 0.2s;
+}
+
+.burger-button.is-active span:nth-child(1) {
+  top: calc(50% - 1px);
+  transform: rotate(3645deg);
+  transform-origin: center;
+}
+
+.burger-button span:nth-child(2) {
+  top: calc(50% - 1px);
+}
+
+.burger-button.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+
+.burger-button span:nth-child(3) {
+  top: unset;
+  bottom: 0%;
+}
+
+.burger-button.is-active span:nth-child(3) {
+  bottom: calc(50% - 1px);
+  transform: rotate(-3645deg);
+  transform-origin: center;
+}
+
+
+.burger {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  top: var(--header-height);
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.64);
+  overflow: hidden;
+  transition: height 0.5s;
+
+
+  &.is-open {
+    width: 100%;
+    overflow: visible;
+
+    .burger-nav-item {
+      opacity: 1;
+    }
+  }
+}
+
+.burger-menu {
+  padding: 100px 30px 50px;
+  height: calc(100% - var(--header-height));
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #000000;
+
+
+  .burger-nav-item {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  @media (min-width: 768px) {
+    padding: 140px 60px 60px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 80px 50px 50px;
+  }
+}
+
+.burger-nav {
+  display: flex;
+  flex-direction: column;
+
+  .burger-nav-item {
+    color: var(--base-color);
+    font-family: "Stinger Wide", Roboto, Helvetica Neue, Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0 0 20px;
+    font-size: 24px;
+
+    @media (min-width: 768px) {
+      margin: 0 0 25px;
+      font-size: 35px;
+    }
+  }
+}
