@@ -19,7 +19,7 @@
     width: var(--social_link-size);
     height: var(--social_link-size);
     border-radius: 50%;
-    background-color: var(--neutral-accent-color);
+    background-color: var(--base-color);
     transition: var(--transition-all);
 
     svg path{
@@ -31,7 +31,7 @@
     }
 
     &:hover {
-      background-color: #474747;
+      background-color: var(--neutral-accent-color);
     }
   }
 }
@@ -42,7 +42,7 @@
   margin-right: 60px;
 
   .header-navigation_link {
-    color: var(--neutral-ligth-color);
+    color: var(--base-color);
     font-size: var(--font-size-small);
     font-weight: 700;
     text-decoration: none;
@@ -54,7 +54,7 @@
 
     &.is-active,
     &:hover {
-      color: var(--base-color);
+      color: var(--neutral-accent-color);
     }
   }
 
@@ -87,7 +87,6 @@
   .container-title-h1 {
     margin: 0;
     padding-top: 40px;
-    font-family: "Stinger Wide", Roboto, Helvetica Neue, Arial, sans-serif;
   }
 
   @media (min-width: 768px) {
@@ -129,19 +128,39 @@
     background-color: #D8D8D8;
   }
 
+  &.header-button {
+    width: max-content;
+    padding: 5px 15px;
+  }
+
   @media (min-width: 768px) {
     width: max-content;
     font-size: 18px;
     padding: 12px 30px;
+
+    &.header-button {
+      width: max-content;
+      padding: 12px 30px;
+    }
   }
 
   @media (min-width: 992px) {
     padding: 14px 30px;
+
+    &.header-button {
+      width: max-content;
+      padding: 14px 30px;
+    }
   }
 
   @media (min-width: 1400px) {
     font-size: 22px;
     padding: 14px 40px;
+
+    &.header-button {
+      width: max-content;
+      padding: 14px 40px;
+    }
   }
 
   &.is-grey {
@@ -182,6 +201,15 @@
     }
   }
 
+  &.is-subscribe {
+    color: var(--primal-color);
+    background: #FDF7EA;
+
+    &:hover, &:active {
+      outline: 2px solid var(--primal-color);
+    }
+  }
+
   &.is-small {
     font-size: var(--font-size-small);
   }
@@ -212,6 +240,12 @@
     outline: none;
     color: var(--primal-color);
     background-color: var(--accent-color);
+  }
+
+  &.is-white {
+    outline: none;
+    color: var(--primal-color);
+    background-color: var(--base-color);
   }
 
   @media (min-width: 1400px) {
@@ -407,6 +441,10 @@
   @media (min-width: 1400px) {
     height: 62px;
     padding: 15px 28px;
+  }
+
+  &:focus {
+    background: var(--base-color);
   }
 }
 

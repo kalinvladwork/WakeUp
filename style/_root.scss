@@ -7,7 +7,7 @@
   --neutral-color: #2C2C2C;
   --neutral-ligth-color: #959595;
   --accent-color: #F1C141;
-  --neutral-accent-color: #FDF7EA;;
+  --neutral-accent-color: #F7D477;
 
   --transition-all: all 0.4s;
 
@@ -27,7 +27,7 @@
   --font-size-smalled: 12px;
 
   --header-height: 40px;
-  --brand-name-width: 122px;
+  --brand-name-width: 74px;
   --brand-name-margin-right: 10px;
   --social_link-size: 24px;
   --container-title-height: 140px;
@@ -48,7 +48,7 @@
     --font-size-smalled: 12px;
 
     --header-height: 60px;
-    --brand-name-width: 138px;
+    --brand-name-width: 114px;
     --brand-name-margin-right: 10px;
     --social_link-size: 24px;
     --container-title-height: 190px;
@@ -70,7 +70,7 @@
     --font-size-smalled: 12px;
 
     --header-height: 60px;
-    --brand-name-width: 170px;
+    --brand-name-width: 114px;
     --brand-name-margin-right: 10px;
     --social_link-size: 24px;
     --container-title-height: 190px;
@@ -92,7 +92,7 @@
     --font-size-smalled: 12px;
 
     --header-height: 60px;
-    --brand-name-width: 170px;
+    --brand-name-width: 114px;
     --brand-name-margin-right: 30px;
     --social_link-size: 24px;
     --container-title-height: 218px;
@@ -112,7 +112,7 @@
     --font-size-smalled: 14px;
 
     --header-height: 81px;
-    --brand-name-width: 208px;
+    --brand-name-width: 104px;
     --brand-name-margin-right: 40px;
     --social_link-size: 28px;
     --container-title-height: 283px;
@@ -121,3 +121,21 @@
     --card-container-big-gap: 72px;
   }
 }
+p {
+  @media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 992px) {
+
+  }
+
+  @media (min-width: 1200px) {
+
+  }
+
+  @media (min-width: 1400px) {
+
+  }
+}
+
