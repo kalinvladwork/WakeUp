@@ -28,7 +28,7 @@ function openTab(evt, nabName) {
     evt.currentTarget.className += " is-active";
 }
 
-
+//TODO: refactoring this shit, delete old code modal
 //modal
 const modal = document.querySelector('.modal');
 const body = document.querySelector('body');
@@ -38,6 +38,8 @@ const btnsOpenModal = document.querySelectorAll('.header-button');
 const btnFormModal = document.querySelector('.modal-button');
 const stepOneFormModal = document.querySelector('.step-one');
 const stepTwoFormModal = document.querySelector('.step-two');
+const stepOneFormModal2 = document.querySelector('.step-one-2');
+const stepTwoFormModal2 = document.querySelector('.step-two-2');
 
 const openModal = function () {
     modal.classList.remove('is-hidden');
@@ -74,6 +76,12 @@ function stepForm() {
     stepTwoFormModal.classList.add('is-active');
 }
 
+function stepForm2() {
+    event.preventDefault()
+    stepOneFormModal2.classList.remove('is-active');
+    stepTwoFormModal2.classList.add('is-active');
+}
+
 //subscribe form
 const stepOneFormSubscribe = document.querySelector('.subscribe-form-step-one');
 const stepTwoFormSubscribe = document.querySelector('.subscribe-form-step-two');
@@ -83,6 +91,38 @@ function subscribeForm() {
     stepOneFormSubscribe.classList.remove('is-active');
     stepTwoFormSubscribe.classList.add('is-active');
 }
+
+// new functional modal
+const openModalButtons = document.querySelectorAll('.open-modal');
+const modals = document.querySelectorAll('.modal');
+
+function openModal2(modal) {
+    modal.classList.remove('is-hidden');
+}
+function closeModal2(modal) {
+    modal.classList.add('is-hidden');
+}
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        openModal2(modal);
+    });
+});
+
+modals.forEach(modal => {
+    const closeModalButton = modal.querySelector('.close-modal');
+    const overlay = modal.querySelector('.overlay');
+
+    closeModalButton.addEventListener('click', () => {
+        closeModal2(modal);
+    });
+
+    overlay.addEventListener('click', () => {
+        closeModal2(modal);
+    });
+});
 
 
 //slider archive
@@ -118,19 +158,19 @@ $(document).ready(function(){
 });
 
 //map
-function initMap() {
-    const map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 50.45464374452758, lng: -30.488302931734445},
-        zoom: 12,
-        // styles: [{
-        //     // Стили скопировать сюда или JSON
-        // }]
-    });
-
-    $.getJSON("style_map.json", function(data) {
-        map.setOptions({styles: data});
-    });
-}
+// function initMap() {
+//     const map = new google.maps.Map(document.getElementById('map'), {
+//         center: {lat: 50.45464374452758, lng: -30.488302931734445},
+//         zoom: 12,
+//         // styles: [{
+//         //     // Стили скопировать сюда или JSON
+//         // }]
+//     });
+//
+//     $.getJSON("style_map.json", function(data) {
+//         map.setOptions({styles: data});
+//     });
+// }
 
 // function initMap() {
 //     let coordinates = {lat: 50.45464374452758, lng: 30.488302931734445};

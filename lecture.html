@@ -48,7 +48,7 @@
                     <span></span>
                 </button>
 
-                <button class="header-button button is-on-dark-bg is-small" type="button">Стати спікером</button>
+                <button data-modal="modal2" class="header-button open-modal button is-on-dark-bg is-small" type="button">Стати спікером</button>
             </div>
         </div>
     </div>
@@ -116,29 +116,36 @@
                     <div class="footnote_head_code d-none d-md-flex d-xl-none">
                         <img src="images/qr-code.png" alt="qr code">
                     </div>
-                    <button type="button" class="button is-light">Зареєструватися</button>
+                    <button data-modal="modal1" type="button" class="button open-modal is-light">Зареєструватися</button>
                 </div>
             </div>
             <div class="col-xl-8 col-12">
-                <div class="lecture-info">
-                    <h1 class="title-main u-h1">Яніна Соколова: Карантин – це можливість?</h1>
-                    <p class="u-h5">Відкриємо нові можливості, під час кризи, разом з Яніною Соколовою. Відома телеведуча розкаже,
+                <div class="lecture-content">
+                    <h1>Яніна Соколова: Карантин – це можливість?</h1>
+                    <p>Відкриємо нові можливості, під час кризи, разом з Яніною Соколовою. Відома телеведуча розкаже,
                         як реагувати на виклики сьогодення. Обов'язково всі прорвемось і станемо сильнішими! - страхи
                         і джерела натхнення під час карантину - як не заразитися інформаційними вірусами - ваші
                         запитання абсолютно всім</p>
-                    <article class="lecture-info_article">
-                        <h3 class="u-h3">Обговоримо:</h3>
-                        <ul>
-                            <li>страхи і джерела натхнення під час карантину</li>
-                            <li>як не заразитися інформаційними вірусами</li>
-                            <li>ваші запитання</li>
-                        </ul>
-                    </article>
-                    <article class="lecture-info_article">
-                        <h3 class="u-h3">Буде корисно:</h3>
-                        <p>абсолютно всім</p>
-                    </article>
-                </div>
+
+                    <p>Відкриємо нові можливості, під час кризи, разом з Яніною Соколовою. Відома телеведуча розкаже,
+                        як реагувати на виклики сьогодення. Обов'язково всі прорвемось і станемо сильнішими! - страхи
+                        і джерела натхнення під час карантину - як не заразитися інформаційними вірусами - ваші
+                        запитання абсолютно всім</p>
+                    <h3>Обговоримо:</h3>
+                    <ul>
+                        <li>страхи і джерела натхнення під час карантину</li>
+                        <li>як не заразитися інформаційними вірусами</li>
+                        <li>ваші запитання</li>
+                    </ul>
+
+                    <ol>
+                        <li>страхи і джерела натхнення під час карантину</li>
+                        <li>як не заразитися інформаційними вірусами</li>
+                        <li>ваші запитання</li>
+                    </ol>
+                    <h3>Буде корисно:</h3>
+                    <p>абсолютно <a href="#">всім</a></p>
+                 </div>
             </div>
         </div>
     </section>
@@ -159,7 +166,7 @@
         <div class="card-container">
             <a  href="lecture.html" class="card">
                 <div class="card_image">
-                    <img class="u-img-fluid" src="images/card-img.jpg" alt="card image">
+                    <img class="" src="images/card-img.jpg" alt="card image">
                 </div>
                 <div class="card_time">
                     7 квітня 2021
@@ -170,7 +177,7 @@
             </a>
             <a href="lecture.html" class="card">
                 <div class="card_image">
-                    <img class="u-img-fluid" src="images/card-img.jpg" alt="card image">
+                    <img class="" src="images/card-img.jpg" alt="card image">
                 </div>
                 <div class="card_time">
                     7 квітня 2021
@@ -181,7 +188,7 @@
             </a>
             <a href="lecture.html" class="card">
                 <div class="card_image">
-                    <img class="u-img-fluid" src="images/card-img.jpg" alt="card image">
+                    <img class="" src="images/card-img.jpg" alt="card image">
                 </div>
                 <div class="card_time">
                     7 квітня 2021
@@ -288,7 +295,7 @@
 </footer>
 
 
-<div class="modal is-hidden">
+<div class="modal is-hidden" id="modal2">
     <div class="modal-container">
         <button class="close-modal"><img src="images/close.svg" alt="close icon"></button>
         <div class="step-one is-active">
@@ -314,7 +321,34 @@
         </div>
     </div>
 
-    <div class="overlay is-hidden"></div>
+    <div class="overlay"></div>
+</div>
+
+<div class="modal is-hidden" id="modal1">
+    <div class="modal-container">
+        <button class="close-modal"><img src="images/close.svg" alt="close icon"></button>
+        <div class="step-one-2 is-active">
+            <h2 class="u-h2 title-main u-text-center">Змінити заголовок</h2>
+            <form action="" class="modal-form">
+                <input type="text" placeholder="Ім’я" class="modal-form-control">
+                <input type="tel" placeholder="Телефон" class="modal-form-control">
+                <input type="email" placeholder="e-mail" class="modal-form-control col-all">
+                <textarea name="" id="" cols="30" rows="3" placeholder="Звідки про нас дізнались?" class="modal-form-control col-all"></textarea>
+                <div class="modal-button-container u-text-center col-all">
+                    <button class="modal-button button" onclick="stepForm2()">Зареєструватись</button>
+                </div>
+            </form>
+        </div>
+        <div class="step-two-2">
+            <div class="circle-approve">
+                <img src="images/check.svg" alt="check mark">
+            </div>
+            <h2 class="u-h1 u-font-family-stinger">Дякую</h2>
+            <p class="u-h5">Ваш запит надіслано.</p>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
 </div>
 
 <script src="script/main.js" type="text/javascript" charset="utf-8"></script>
