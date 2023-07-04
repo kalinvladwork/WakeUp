@@ -51,6 +51,25 @@
   height: 100%;
 }
 
+.hero-block-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  height: 100%;
+  min-height: calc(100vh - var(--header-height));
+  justify-content: space-around;
+  text-decoration: none;
+  position: relative;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+.hero-block-item-container {
+  height: 100%;
+}
+
 .hero-block_info {
   display: flex;
   height: 100%;
@@ -59,7 +78,7 @@
   justify-content: flex-start;
   flex-direction: column;
   align-content: flex-start;
-  width: 100%;
+  //width: 100%;
 
   @media (min-width: 768px) {
     margin-top: 30px;
@@ -190,7 +209,7 @@
 
 .hero-block_capture {
   position: absolute;
-  right: -19px;
+  right: 0;
   bottom: 0;
   top: 30vh;
   height: 80px;
