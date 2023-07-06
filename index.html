@@ -86,52 +86,104 @@
 
 </header>
 
-<div class="hero-block-wrapper">
-    <div class="hero-block">
-        <a href="#" class="hero-block-item ">
-            <div class="hero-block-item-container container">
-                <div class="row">
-                    <div class="hero-block_info col-6">
-                        <h2 class="hero-block_info_h2 d-none d-lg-block">recovery <br>
-                            talks</h2>
-                        <div>
-                            <span class="label is-white">Episode 1</span>
-                        </div>
-                        <h1 class="hero-block_info_h1">Валерій <br>
-                            Пекар
-                        </h1>
-                        <p class="hero-block_info_p">підприємець, викладач <br>
-                            Києво-Могилянської бізнес-школи </p>
-                    </div>
 
-                    <div class="hero-block_img is-bottom col-6">
-                        <h2 class="hero-block_info_h2 d-block d-lg-none">recovery<br>
-                            talks</h2>
 
-                        <img class="u-img-fluid" src="images/valerii.png"
-                             srcset="
+<main>
+    <div class="hero-block-wrapper">
+        <div class="hero-block">
+
+            <div class="slider-hero-block">
+                <div>
+                    <div class="hero-block-slide">
+                        <a href="#" class="hero-block-item ">
+                            <div class="hero-block-item-container container">
+                                <div class="row">
+                                    <div class="hero-block_info col-6">
+                                        <h2 class="hero-block_info_h2 d-none d-lg-block">recovery <br>
+                                            talks</h2>
+                                        <div>
+                                            <span class="label is-white">Episode 1</span>
+                                        </div>
+                                        <h1 class="hero-block_info_h1">Валерій <br>
+                                            Пекар
+                                        </h1>
+                                        <p class="hero-block_info_p">підприємець, викладач <br>
+                                            Києво-Могилянської бізнес-школи </p>
+                                    </div>
+
+                                    <div class="hero-block_img is-bottom col-6">
+                                        <h2 class="hero-block_info_h2 d-block d-lg-none">recovery<br>
+                                            talks</h2>
+
+                                        <img class="u-img-fluid" src="images/valerii.png"
+                                             srcset="
                         images/valerii_x2.png 800w,
                         images/valerii_x3.png  1200w,
                       "
-                             alt="Валерій Пекар">
+                                             alt="Валерій Пекар">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="hero-block_capture">
+                                <img src="images/hero-block-capture-img.png" alt="youtube icon">
+                                <div class="hero-block_capture_info">
+                                    <p class="hero-block_capture_info_date">11 травня</p>
+                                    <p class="hero-block_capture_info_time">9:00</p>
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
                 </div>
+                <div>
+                    <div class="hero-block-slide">
+                        <a href="#" class="hero-block-item ">
+                            <div class="hero-block-item-container container">
+                                <div class="row">
+                                    <div class="hero-block_info col-6">
+                                        <h2 class="hero-block_info_h2 d-none d-lg-block">recovery <br>
+                                            talks</h2>
+                                        <div>
+                                            <span class="label is-white">Episode 1</span>
+                                        </div>
+                                        <h1 class="hero-block_info_h1">Валерій <br>
+                                            Пекар
+                                        </h1>
+                                        <p class="hero-block_info_p">підприємець, викладач <br>
+                                            Києво-Могилянської бізнес-школи </p>
+                                    </div>
 
-            </div>
+                                    <div class="hero-block_img is-bottom col-6">
+                                        <h2 class="hero-block_info_h2 d-block d-lg-none">recovery<br>
+                                            talks</h2>
 
-            <div class="hero-block_capture">
-                <img src="images/hero-block-capture-img.png" alt="youtube icon">
-                <div class="hero-block_capture_info">
-                    <p class="hero-block_capture_info_date">11 травня</p>
-                    <p class="hero-block_capture_info_time">9:00</p>
+                                        <img class="u-img-fluid" src="images/valerii.png"
+                                             srcset="
+                        images/valerii_x2.png 800w,
+                        images/valerii_x3.png  1200w,
+                      "
+                                             alt="Валерій Пекар">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="hero-block_capture">
+                                <img src="images/hero-block-capture-img.png" alt="youtube icon">
+                                <div class="hero-block_capture_info">
+                                    <p class="hero-block_capture_info_date">11 травня</p>
+                                    <p class="hero-block_capture_info_time">9:00</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </a>
-
+        </div>
     </div>
-</div>
 
-<main>
     <div class="container container-index-about">
         <div class="row">
             <div class="col-lg-4 col-12 container-index-about-img">
@@ -323,7 +375,6 @@
     </div>
 </footer>
 
-
 <div class="modal is-hidden">
     <div class="modal-container">
         <button class="close-modal"><img src="images/close.svg" alt="close icon"></button>
@@ -371,6 +422,15 @@
 <script type="text/javascript" src="script/jquery-3.6.1.min.js"></script>
 <script src="script/slick.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="script/main.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+        $('.slider-hero-block').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+    });
+</script>
 
 </body>
 </html>
