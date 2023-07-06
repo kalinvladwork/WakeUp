@@ -509,17 +509,6 @@
   @media (min-width: 1400px) {
     min-width: 625px;
   }
-
-  .form-control {
-    width: auto;
-    background-color: #FFECBB;
-    border: 1px solid #000000;
-    color: var(--primal-color);
-
-    &:focus {
-      background: var(--base-color);
-    }
-  }
 }
 
 .subscribe-form-step-one {
