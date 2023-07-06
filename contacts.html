@@ -86,13 +86,14 @@
 
 </header>
 
-<div class="after-header ">
-    <div class="container container-title">
-        <h1 class="u-h1 container-title-h1">Контакти</h1>
-    </div>
-</div>
 
 <main>
+    <div class="after-header ">
+        <div class="container container-title">
+            <h1 class="u-h1 container-title-h1">Контакти</h1>
+        </div>
+    </div>
+
     <section class="container contacts-container">
         <div class="row">
             <div class="col-lg-6 col-md-12 col-12">
@@ -139,7 +140,10 @@
                 Підписуйся та отримуй інфу про лекції та Wake Up новини!
             </div>
             <form class="subscribe-form subscribe-form-step-one is-active" action="">
-                <input class="form-control" type="email" placeholder="Ваш email">
+                <div class="form-control is-subscribe">
+                    <input class="form-control_input" type="email" placeholder="Ваш email">
+                    <span class="error">This is not valid</span>
+                </div>
                 <button class="button is-subscribe" type="submit" onclick="subscribeForm()">Підписатися</button>
                 <p class="subscribe-form_text">Натискаючи на кнопку, ви даєте згоду на обробку персональних даних
                     та погоджуєтеся з політикою конфіденційності</p>
@@ -231,11 +235,26 @@
         <div class="step-one is-active">
             <h2 class="u-h2 title-main u-text-center">Стати спікером</h2>
             <form action="" class="modal-form">
-                <input type="text" placeholder="Ім’я" class="modal-form-control">
-                <input type="tel" placeholder="Телефон" class="modal-form-control">
-                <input type="text" placeholder="Запропонуй тему" class="modal-form-control col-all">
-                <input type="text" placeholder="Чому ця тема важлива" class="modal-form-control col-all">
-                <textarea name="" id="" cols="30" rows="3" placeholder="Ща саме ти розкажеш" class="modal-form-control col-all"></textarea>
+                <div class="modal-form-control">
+                    <input type="text" placeholder="Ім’я" class="modal-form-control_input">
+                    <span class="error">This is not valid</span>
+                </div>
+                <div class="modal-form-control">
+                    <input type="tel" placeholder="Телефон" class="modal-form-control_input">
+                    <span class="error">This is not valid</span>
+                </div>
+                <div class="modal-form-control col-all">
+                    <input type="text" placeholder="Запропонуй тему" class="modal-form-control_input">
+                    <span class="error">This is not valid</span>
+                </div>
+                <div class="modal-form-control col-all">
+                    <input type="text" placeholder="Чому ця тема важлива" class="modal-form-control_input">
+                    <span class="error">This is not valid</span>
+                </div>
+                <div class="modal-form-control col-all">
+                    <textarea name="" id="" cols="30" rows="3" placeholder="Ща саме ти розкажеш" class="modal-form-control_input col-all"></textarea>
+                    <span class="error">This is not valid</span>
+                </div>
                 <div class="modal-button-container u-text-center col-all">
                     <button class="modal-button button" onclick="stepForm()">Відправити</button>
                 </div>

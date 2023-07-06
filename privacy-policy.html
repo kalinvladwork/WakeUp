@@ -314,11 +314,26 @@
         <div class="step-one is-active">
             <h2 class="u-h2 title-main u-text-center">Стати спікером</h2>
             <form action="" class="modal-form">
-                <input type="text" placeholder="Ім’я" class="modal-form-control">
-                <input type="tel" placeholder="Телефон" class="modal-form-control">
-                <input type="text" placeholder="Запропонуй тему" class="modal-form-control col-all">
-                <input type="text" placeholder="Чому ця тема важлива" class="modal-form-control col-all">
-                <textarea name="" id="" cols="30" rows="3" placeholder="Ща саме ти розкажеш" class="modal-form-control col-all"></textarea>
+                <div class="modal-form-control">
+                    <input type="text" placeholder="Ім’я" class="modal-form-control_input">
+                    <span class="error">This is not valid</span>
+                </div>
+                <div class="modal-form-control">
+                    <input type="tel" placeholder="Телефон" class="modal-form-control_input">
+                    <span class="error">This is not valid</span>
+                </div>
+                <div class="modal-form-control col-all">
+                    <input type="text" placeholder="Запропонуй тему" class="modal-form-control_input">
+                    <span class="error">This is not valid</span>
+                </div>
+                <div class="modal-form-control col-all">
+                    <input type="text" placeholder="Чому ця тема важлива" class="modal-form-control_input">
+                    <span class="error">This is not valid</span>
+                </div>
+                <div class="modal-form-control col-all">
+                    <textarea name="" id="" cols="30" rows="3" placeholder="Ща саме ти розкажеш" class="modal-form-control_input col-all"></textarea>
+                    <span class="error">This is not valid</span>
+                </div>
                 <div class="modal-button-container u-text-center col-all">
                     <button class="modal-button button" onclick="stepForm()">Відправити</button>
                 </div>

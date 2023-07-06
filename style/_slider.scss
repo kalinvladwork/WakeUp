@@ -127,12 +127,12 @@
   }
 
   .slick-track {
-    gap: var(--card-container-gap);
     display: flex;
   }
 
   .slick-slide {
     height: 100%;
+    width: 100vw;
   }
 
   .slick-prev,

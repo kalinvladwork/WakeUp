@@ -124,39 +124,6 @@ modals.forEach(modal => {
     });
 });
 
-
-//slider archive
-$(document).ready(function(){
-    $('.slider-archive').slick({
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
-});
-
-//slider hero block
-$(document).ready(function(){
-    $('.slider-hero-block').slick({
-        infinite: true,
-    });
-});
-
 //map
 // function initMap() {
 //     const map = new google.maps.Map(document.getElementById('map'), {
