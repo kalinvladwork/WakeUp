@@ -441,7 +441,12 @@ ul li + li {
 }
 .button.header-button {
   width: max-content;
-  padding: 5px 15px;
+  padding: 1px 15px;
+}
+@media (min-width: 365px) {
+  .button.header-button {
+    padding: 5px 15px;
+  }
 }
 @media (min-width: 768px) {
   .button {
@@ -1471,8 +1476,13 @@ ul li + li {
 }
 
 .hero-block-wrapper {
-  background-color: var(--accent-color);
+  background-color: #ffffff;
   margin-top: calc(var(--header-height) - 1px);
+}
+@media (min-width: 992px) {
+  .hero-block-wrapper {
+    background-color: var(--accent-color);
+  }
 }
 
 .hero-block {
@@ -1502,23 +1512,36 @@ ul li + li {
   height: 100%;
   min-height: calc(100vh - var(--header-height));
 }
+@media (max-width: 992px) {
+  .hero-block-item-container {
+    min-width: 100%;
+  }
+}
 .hero-block-item-container .row {
   height: 100%;
   min-height: calc(100vh - var(--header-height));
+  flex-direction: column-reverse;
+}
+@media (min-width: 992px) {
+  .hero-block-item-container .row {
+    flex-direction: row;
+  }
 }
 
 .hero-block_info {
   display: flex;
   height: 100%;
-  margin-top: 15px;
+  padding-top: 15px;
   padding-bottom: 50px;
+  padding-left: 40px;
   justify-content: flex-start;
   flex-direction: column;
   align-content: flex-start;
+  background-color: var(--accent-color);
 }
 @media (min-width: 768px) {
   .hero-block_info {
-    margin-top: 30px;
+    padding-top: 30px;
     padding-bottom: 80px;
   }
 }
@@ -1528,6 +1551,16 @@ ul li + li {
     padding-bottom: 80px;
     flex-direction: column;
     justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-block_info {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .hero-block_info {
+    padding-left: 60px;
   }
 }
 
@@ -1637,16 +1670,28 @@ ul li + li {
 }
 .hero-block_img img {
   width: 70%;
+  height: 80%;
+  margin-top: 30px;
 }
 .hero-block_img.is-bottom {
   align-self: flex-end;
+  background-color: #ffffff;
 }
 .hero-block_img.has-capture {
   position: relative;
 }
 @media (min-width: 992px) {
   .hero-block_img img {
-    height: 100%;
+    width: 100%;
+  }
+  .hero-block_img.is-bottom {
+    background-color: transparent;
+  }
+}
+@media (min-width: 1200px) {
+  .hero-block_img img {
+    width: 100%;
+    margin-top: 60px;
   }
 }
 
@@ -1665,11 +1710,16 @@ ul li + li {
   background-color: var(--base-color);
   border-radius: 20px 0 0 20px;
   border: 2px solid #000000;
-  padding: 40px;
+  padding: 15px;
   align-items: center;
 }
 .hero-block_capture img {
   width: 75px;
+}
+@media (min-width: 450px) {
+  .hero-block_capture {
+    top: 45vh;
+  }
 }
 @media (min-width: 768px) {
   .hero-block_capture {
