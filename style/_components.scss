@@ -130,7 +130,13 @@
 
   &.header-button {
     width: max-content;
-    padding: 5px 15px;
+    padding: 1px 15px;
+  }
+
+  @media (min-width: 365px) {
+    &.header-button {
+      padding: 5px 15px;
+    }
   }
 
   @media (min-width: 768px) {
